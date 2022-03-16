@@ -1,21 +1,38 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Sider from './components/Sider.vue';
+import VideoPlay from './components/VideoPlay.vue';
+
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div id="page">
+    <h1>蒙版弹幕实现效果展示</h1>
+    <div id="main">
+      <VideoPlay id='videoPlay'/>
+      <sider></sider>
+    </div>
+  </div>
+  
 </template>
 
-<style>
+<style lang='scss'>
+body {
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  #page {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    padding: 20px 30px;
+    #main{
+      display: flex;
+    }
+  }
 }
 </style>
